@@ -1,0 +1,80 @@
+body {
+  min-width: 1440px;
+  background-color: black;
+}
+main {
+  width: 375px;
+  height: 600px;
+  /*Es sthet nicht zentral, 
+  soll braucht man nur den Abstand top und unten definieren,
+  und linkds und rechts automatischen zentieren*/
+  margin-top: 120px;
+  margin-bottom: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(22, 22, 22);
+}
+.profile {
+  height: 40%;
+  /*Alle box von diese Erternbox will vertikal nacheinander stehen*/
+  display: flex;
+  flex-direction: column; /*vertikal nacheinander sthen*/
+  text-align: center; /*Alle text im center stehen*/
+}
+#me {
+  width: 20%; /*bild größe 20% zu den übergeordenet Elemente(.profile)*/
+  height: auto; /*damit den größe-verharltnis doch entsprechen*/
+  border-radius: 50%; /*Bild im circle*/
+  /*Da Erternteile zwar schon in flex definiert, kann doch durch folgende Code den Bild zu zentieren*/
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  color: hsl(0, 0%, 100%);
+}
+h6 {
+  color: hsl(75, 94%, 57%);
+  margin-top: 0px;
+  font-size: 14px;
+}
+p {
+  color: hsl(0, 0%, 50%);
+}
+
+.sozial {
+  margin: 30px;
+  /*Alle childbox von diese Erternbox will vertikal nacheinander stehen*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* a tag selbst Horizontale Zentrierung */
+  align-items: center; /* Vertikale Zentrierung */
+}
+.sozial a {
+  margin: 10px;
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+  font-size: 14px;
+  line-height: 40px; /*Größe muss mit dem height von <a>tag gleich,
+ damit Linktext auch horizontal zentieren kann*/
+  text-align: center;
+  text-decoration: none; /*enterenen den Underline von Linktext*/
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    min-width: 320px;
+  }
+}
